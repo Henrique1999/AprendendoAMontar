@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Exemplo de requisição AJAX</title>
+  </head>
+  <body>
+    <h1>Exemplo de requisição AJAX</h1>
+    <button onclick="getValores()">Obter valores</button>
+    <script>
+      function getValores() {
+        fetch('http://localhost:3000/valores')
+          .then(response => response.json())
+          .then(data => console.log(data))
+          .catch(error => console.error(error));
+      }
+    </script>
+  </body>
+</html>
